@@ -1,8 +1,11 @@
 import "./App.scss"
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <div className="App"></div>
+    <div className="App">
+      <Home/>
+    </div>
   );
 }
 
