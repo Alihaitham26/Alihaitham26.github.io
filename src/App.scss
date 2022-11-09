@@ -1,12 +1,10 @@
-$bg-color:#23263a;
-$primary-color:#ff4a57;
-
+$bg-color:#2C3639;
+$primary-color:#DCD7C9;
+*{box-sizing: border-box;}
 html,body,#root,.App{
   height: 100%;
 }
-h1,h2,h3,h4,h5,h6{
-  margin: 0;
-}
+h1,h2,h3,h4,h5,h6,p{margin: 0;}
 button{
   cursor: pointer;
 }
@@ -17,6 +15,8 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 .Home{
+  height: 100%;
+
   nav{
     width: 100%;
     height: 50px;
@@ -24,26 +24,120 @@ body{
     text-align: center;
     color: $primary-color;
     font-weight: 700;
-    background-color: #202235;
+    background-color: #3F4E4F;
     line-height: 50px;
   }
+
   .title{
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
     left: 10%;
+
     h1{
       font-size: 30pt;
       @media(max-width:786px){font-size: 25pt;}
     }
+
     button{
       width: 150px;
       height: 50px;
       margin-top: 10px;
       border: none;
       background-color: $primary-color;
-      color: #fff;
+      color: #000;
+      font-size: 14pt;
       border-radius: 4px;
+    }
+  }
+}
+
+.main-box{
+  display: flex;
+  flex-direction: column;
+  background-color: #3F4E4F;
+  height: fit-content;
+  margin: 50px;
+  font-size: 20pt;
+  padding: 20px;
+  border-radius: 10px;
+
+  @media(max-width:800px){
+    height: fit-content;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  h2{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+}
+
+.skills-box{
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-evenly;
+  
+  .skill{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    @media(max-width:800px){
+       width: 100%;
+    }
+
+    h3{
+      color: $primary-color;
+      margin-left: 10px;
+    }
+
+    img{
+      width: 50px;
+      height: 50px;
+    }
+
+  }
+}
+
+
+.capabilities-box{
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: space-evenly;
+  .cap{
+    height: 50%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 400px;
+    h3{
+      color: $primary-color;
+      margin-left: 10px;
+    }
+    img{
+      width: 80px;
+      height: 80px;
+    }
+  }
+  @media (max-width:1300px) {
+    .cap{
+      img{
+        margin-bottom: 15px;
+      }
+      width: 50%;
+      margin-bottom: 40px;
+      font-size: 18pt;
     }
   }
 }
